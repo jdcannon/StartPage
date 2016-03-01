@@ -18,6 +18,11 @@ function parseString(){
 			case ":":
 				searchE = "http://";
 				break;
+				
+			//Subreddit
+			case "r":
+				searchE = "http://www.reddit.com/r/";
+				break;
 			
 			//Google
 			case "g":
