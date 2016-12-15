@@ -1,0 +1,67 @@
+function parseControl(control){
+		var sequence = "";
+		if(control.charAt(0) == ":"){
+				sequence = control.substr(1);
+				return cSearch(sequence);
+		} else if(control.charAt(0) == ";"){
+				sequence = control.substr(1);
+				return scSearch(sequence);
+		} else {
+				sequence = control;
+				return sequence;
+		}
+}
+
+function cSearch(sequence){
+		var base = "https://duckduckgo.com/?q="
+		switch(sequence){
+				case "y":
+						return base + "!yt+";
+						break;
+				case "st":
+						return "http://stackoverflow.com/questions/tagged/";
+						break;
+				default:
+						return base + "!" + sequence + "+";
+						break;
+		}
+}
+
+function scSearch(sequence){
+		if(sequence == "r"){
+				return "http://www.reddit.com/r/";
+		} else if (sequence == "44"){
+				return "http://boards.4chan.org/";
+		} else if (sequence.startsWith("4")){
+				return "http://boards.4chan.org/" + sequence.substr(1) + "/catalog#s=";
+		} else if(sequence == ";"){
+				return "http://";
+		} else {
+				return "sequence";
+		}
+}
+
+function searchBar(search){
+		var splitTerm = search.split(' ');
+		var control = splitTerm.unshift().toLocaleLowerCase();
+		var term = splitTerm.join('+');
+		var parsedControl = parseControl(control);
+		window.location = parsedControl + term;
+}
+
+
+function parseString(){
+	var myform = document.getElementById("scontent");
+	var value = myform.value;
+	var searchE = "https://duckduckgo.com/?q="
+	if (value.charAt(0) == ":") {
+		var sposit = value.search(" ");
+		var bang = value.slice(1, sposit).toLocaleLowerCase();
+		var selectorp = bang.search(":");
+		var selector = "";
+		if (selectorp >=1){selector = bang.slice(selectorp + 1); bang = bang.slice(0,selectorp);};
+		var sterm = value.slice(sposit + 1).replace(/\s/g, "+");
+		value = sterm;
+	}
+	window.location = searchE +value;
+}

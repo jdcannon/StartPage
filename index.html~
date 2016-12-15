@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.4/vue.js"></script>
+	</head>
+	<body>
+		<section id="target">
+		</section>
+		<script src="index.js"></script>
+	</body>
+</html>

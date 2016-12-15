@@ -1,0 +1,11 @@
+Vue.component('page-link', {
+		template:'<div class="link">' +
+						 '<a href="{{link}}">{{title}}</a>' +
+						 '</div>',
+		props:['link','title']
+});
+
+
+var app = new Vue({
+		el: '#target'
+});

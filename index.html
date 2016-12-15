@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Exo:600" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.4/vue.js"></script>
+    <script src="search.js"></script>
+  </head>
+  <body>
+    <div id="target" v-bind:class="bgClass">
+      <section class="container">
+        <section class="row">
+          <input content="Text" autofocus autocomplete="off" v-on:keyup.enter="search" v-model="searchTerm">
+        </section>
+        <section class="row">
+          <page-menu :items="menu.Media" menu-title="Media"></page-menu>
+          <page-menu :items="menu.Forums" menu-title="Forums"></page-menu>
+          <page-menu :items="menu.SomethingAwful" menu-title="SA"></page-menu>
+          <page-menu :items="menu.chan" menu-title="4Chan"></page-menu>
+          <page-menu :items="menu.Misc" menu-title="Misc"></pade-menu>
+        </section>
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
