@@ -44,7 +44,7 @@ function scSearch(sequence){
 function searchBar(search){
 		var splitTerm = search.split(' ');
 		var control = splitTerm.shift().toLocaleLowerCase();
-		var term = splitTerm.join('+');
+		var term = splitTerm.join(' ').trim().replace(" ", "+");
 		var parsedControl = parseControl(control);
 		window.location = parsedControl + term;
 }
