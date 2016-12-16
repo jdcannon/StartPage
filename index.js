@@ -82,7 +82,9 @@ var app = new Vue({
 								{title:"Reddit",
 								 link:"http://www.reddit.com"},
 								{title:"GitLab",
-								 link:"https://gitlab.com/dashboard/projects"}
+								 link:"https://gitlab.com/dashboard/projects"},
+								{title:"Twitch",
+								 link:"https://twitch.tv"}
 						]
         }
     }
