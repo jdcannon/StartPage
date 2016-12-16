@@ -84,7 +84,7 @@ var app = new Vue({
                 {title:"GitLab",
                  link:"https://gitlab.com/dashboard/projects"},
                 {title:"Twitch",
-                 link:"https://twitch.tv"}
+                 link:"https://twitch.tv/directory/following"}
             ]
         }
     }
