@@ -22,19 +22,19 @@ var app = new Vue({
             searchBar(this.searchTerm);
         }
     },
-		computed:{
-				tod: function(){
-						var now = new Date();
-						return now.getHours();
-				},
-				bgClass: function(){
-						return {
-								'm2':this.tod >= 6 && this.tod < 11,
-								'd2':this.tod >= 11 && this.tod < 18,
-								'n1':this.tod >= 18 || this.tod < 6
-						}
-				}		
-		},
+    computed:{
+        tod: function(){
+            var now = new Date();
+            return now.getHours();
+        },
+        bgClass: function(){
+            return {
+                'm2':this.tod >= 6 && this.tod < 11,
+                'd2':this.tod >= 11 && this.tod < 18,
+                'n1':this.tod >= 18 || this.tod < 6
+            }
+        }
+    },
     data:{
         searchTerm: "",
         menu:{
@@ -49,8 +49,8 @@ var app = new Vue({
             "Forums":[
                 {title:"Ballp.it",
                  link:"https://ballp.it"},
-								{title:"Nixers",
-								 link:"https://nixers.net/"}
+                {title:"Nixers",
+                 link:"https://nixers.net/"}
             ],
             "SomethingAwful":[
                 {title:"YOSPOS",
@@ -62,30 +62,30 @@ var app = new Vue({
                 {title:"GWS",
                  link:"http://forums.somethingawful.com/forumdisplay.php?forumid=161"}
             ],
-						"chan":[
-								{title:"/g/",
-								 link:"http://boards.4chan.org/g"},
-								{title:"/3/",
-								 link:"http://boards.4chan.org/3"},
-								{title:"/gd/",
-								 link:"http://boards.4chan.org/gd"},
-								{title:"/wg/",
-								 link:"http://boards.4chan.org/wg"},
-								{title:"/diy/",
-								 link:"http://boards.4chan.org/diy"},
-								{title:"/tg/",
-								 link:"http://boards.4chan.org/tg"}
-						],
-						"Misc":[
-								{title:"Discord",
-								 link:"https://discordapp.com/channels/@me"},
-								{title:"Reddit",
-								 link:"http://www.reddit.com"},
-								{title:"GitLab",
-								 link:"https://gitlab.com/dashboard/projects"},
-								{title:"Twitch",
-								 link:"https://twitch.tv"}
-						]
+            "chan":[
+                {title:"/g/",
+                 link:"http://boards.4chan.org/g"},
+                {title:"/3/",
+                 link:"http://boards.4chan.org/3"},
+                {title:"/gd/",
+                 link:"http://boards.4chan.org/gd"},
+                {title:"/wg/",
+                 link:"http://boards.4chan.org/wg"},
+                {title:"/diy/",
+                 link:"http://boards.4chan.org/diy"},
+                {title:"/tg/",
+                 link:"http://boards.4chan.org/tg"}
+            ],
+            "Misc":[
+                {title:"Discord",
+                 link:"https://discordapp.com/channels/@me"},
+                {title:"Reddit",
+                 link:"http://www.reddit.com"},
+                {title:"GitLab",
+                 link:"https://gitlab.com/dashboard/projects"},
+                {title:"Twitch",
+                 link:"https://twitch.tv"}
+            ]
         }
     }
 });
