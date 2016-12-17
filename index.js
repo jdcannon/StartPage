@@ -129,4 +129,5 @@ window.onload = function(){
 		app.getWeather();
 		app.updateTime();
 		var timer=window.setInterval(app.updateTime, 60000);
+		var weather = window.setInterval(app.getWeather(), 1000*60*15);
 };
