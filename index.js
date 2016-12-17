@@ -14,13 +14,44 @@ Vue.component('page-menu', {
              '</div>'
 });
 
+Vue.component('weather', {
+		props: ['temp', 'weather'],
+		template:'<div class="weather">' +
+						 '<div class="temp">{{temp}}</div>' +
+						 '<div class="conds">{{weather}}</div>' +
+						 '</div>'
+});
+
+Vue.component('today', {
+		props: ['day', 'time'],
+		template:'<div class="weather">' +
+						 '<div class="day">{{day}}</div>' +
+						 '<div class="time">{{time}}</div>' +
+						 '</div>'
+});
+
 
 var app = new Vue({
     el: '#target',
     methods: {
         search: function(event){
             searchBar(this.searchTerm);
-        }
+        },
+				updateTime: function(){
+						var options = {hour12: false}
+						var now = new Date();
+						this.day = now.toDateString();
+						this.time = now.toLocaleTimeString('en-us', options).slice(0,-3);
+				},
+				getWeather: function(){
+						this.$http.get("http://api.openweathermap.org/data/2.5/weather?zip=35476,us&units=imperial&appid=7bc54dac6977ca3f07a995b649f12243").then(function(res){
+								this.temp = res.body.main.temp.toFixed(0) + " °F";
+								this.weather = res.body.weather[0].description.replace(/\b\w/g, function(l){ return l.toUpperCase(); });
+						}, function(res){
+								this.temp = "404";
+								this.weather = "Error Contacting Server";
+						});
+				},																																																																												 
     },
     computed:{
         tod: function(){
@@ -36,7 +67,11 @@ var app = new Vue({
         }
     },
     data:{
+				day: "",
+				time: "",
         searchTerm: "",
+				temp:"",
+				weather:"",
         menu:{
             "Media":[
                 {title:"Youtube",
@@ -89,3 +124,9 @@ var app = new Vue({
         }
     }
 });
+
+window.onload = function(){
+		app.getWeather();
+		app.updateTime();
+		var timer=window.setInterval(app.updateTime, 60000);
+};

@@ -61,6 +61,25 @@ body{
 		margin-top: 40px;
 }
 
+.lpanel{
+		> div{
+				margin-right: 10px;
+		}
+}
+
+.rpanel{
+		> div{
+				margin-left: 10px;
+		}
+}
+
+
+.weather{
+		background: $bcolor;
+		color: $tcolor;
+		padding: 10px;
+}
+
 input{
 		width: 100%;
 		height: 50px;
