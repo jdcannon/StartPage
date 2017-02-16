@@ -98,18 +98,20 @@ var app = new Vue({
                  link:"http://forums.somethingawful.com/forumdisplay.php?forumid=161"}
             ],
             "chan":[
-                {title:"/g/",
+                {title:"4/g/",
                  link:"http://boards.4chan.org/g"},
-                {title:"/3/",
+                {title:"4/3/",
                  link:"http://boards.4chan.org/3"},
-                {title:"/gd/",
+                {title:"4/gd/",
                  link:"http://boards.4chan.org/gd"},
-                {title:"/wg/",
+                {title:"4/wg/",
                  link:"http://boards.4chan.org/wg"},
-                {title:"/diy/",
+                {title:"4/diy/",
                  link:"http://boards.4chan.org/diy"},
-                {title:"/tg/",
-                 link:"http://boards.4chan.org/tg"}
+                {title:"4/tg/",
+                 link:"http://boards.4chan.org/tg"},
+                {title:"8/leftypol/",
+                 link:"https://8ch.net/leftypol/index.html"}
             ],
             "Misc":[
                 {title:"Discord",
