@@ -6,28 +6,28 @@
     <link href="style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Exo:600" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.4/vue.js"></script>
-		<script src="https://unpkg.com/vue-resource@1.0.3/dist/vue-resource.js"></script>
+    <script src="https://unpkg.com/vue-resource@1.0.3/dist/vue-resource.js"></script>
     <script src="search.js"></script>
   </head>
   <body>
     <div id="target" v-bind:class="bgClass">
       <section class="container">
-				<section class="row">
-					<div class="lpanel row">
-						<today :day="day" :time="time"></today>
-					</div>
-					<div class="rpanel row">
-						<weather :temp="temp" :weather="weather"></weather>
-					</div>
-				</section>
+        <section class="row">
+          <div class="lpanel row">
+            <today :day="day" :time="time"></today>
+          </div>
+          <div class="rpanel row">
+            <weather :temp="temp" :weather="weather"></weather>
+          </div>
+        </section>
         <section class="row">
           <input content="Text" autofocus autocomplete="off" v-on:keyup.enter="search" v-model="searchTerm">
         </section>
         <section class="row">
           <page-menu :items="menu.Media" menu-title="Media"></page-menu>
-          <page-menu :items="menu.Forums" menu-title="Forums"></page-menu>
+          <page-menu :items="menu.Work" menu-title="Work"></page-menu>
           <page-menu :items="menu.SomethingAwful" menu-title="SA"></page-menu>
-          <page-menu :items="menu.chan" menu-title="Chan"></page-menu>
+          <page-menu :items="menu.Chan" menu-title="Chans"></page-menu>
           <page-menu :items="menu.Misc" menu-title="Misc"></pade-menu>
         </section>
       </section>
