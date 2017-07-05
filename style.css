@@ -21,11 +21,20 @@ body {
 .m3 {
   background-image: url("m3.jpg"); }
 
+.m4 {
+  background-image: url("m4.jpg"); }
+
 .d1 {
-  background-image: url("bg1.jpg"); }
+  background-image: url("d1.jpg"); }
 
 .d2 {
-  background-image: url("bg2.jpg"); }
+  background-image: url("d2.jpg"); }
+
+.d3 {
+  background-image: url("d3.jpg"); }
+
+.d4 {
+  background-image: url("d4.jpg"); }
 
 .n1 {
   background-image: url("n1.jpg"); }
@@ -35,6 +44,9 @@ body {
 
 .n3 {
   background-image: url("n3.jpg"); }
+
+.n4 {
+  background-image: url("n4.jpg"); }
 
 .container {
   width: 55vw;
@@ -119,3 +131,5 @@ ul {
   .menu:hover > a {
     color: rgba(229, 229, 229, 0.5);
     background: rgba(41, 53, 78, 0.9); }
+
+/*# sourceMappingURL=style.css.map */

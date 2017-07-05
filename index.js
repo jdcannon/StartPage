@@ -54,15 +54,38 @@ var app = new Vue({
     },
   },
   computed:{
+    now: function(){
+      return new Date();
+    },
     tod: function(){
-      var now = new Date();
-      return now.getHours();
+      return this.now.getHours();
+    },
+    season: function(){
+      let month = this.now.getMonth();
+      if( month == 11 || month <= 2 ){
+        return 'winter';
+      } else if( month > 2 && month <= 4 ){
+        return 'spring';
+      } else if( month > 4 && month <= 7 ){
+        return 'summer';
+      } else {
+        return 'fall';
+      }
     },
     bgClass: function(){
       return {
-        'm2':this.tod >= 6 && this.tod < 11,
-        'd2':this.tod >= 11 && this.tod < 18,
-        'n1':this.tod >= 18 || this.tod < 6
+        'm1':this.tod >= 6 && this.tod < 11 && this.season == 'winter',
+        'm2':this.tod >= 6 && this.tod < 11 && this.season == 'spring',
+        'm3':this.tod >= 6 && this.tod < 11 && this.season == 'summer',
+        'm4':this.tod >= 6 && this.tod < 11 && this.season == 'fall',
+        'd1':this.tod >= 11 && this.tod < 18 && this.season == 'winter',
+        'd2':this.tod >= 11 && this.tod < 18 && this.season == 'spring',
+        'd3':this.tod >= 11 && this.tod < 18 && this.season == 'summer',
+        'd4':this.tod >= 11 && this.tod < 18 && this.season == 'fall',
+        'n1':this.tod >= 18 || this.tod < 6 && this.season == 'winter',
+        'n2':this.tod >= 18 || this.tod < 6 && this.season == 'spring',
+        'n3':this.tod >= 18 || this.tod < 6 && this.season == 'summer',
+        'n4':this.tod >= 18 || this.tod < 6 && this.season == 'fall'
       }
     }
   },
