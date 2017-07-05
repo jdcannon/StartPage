@@ -79,21 +79,23 @@ var app = new Vue({
         {title:"Netflix",
          link:"http://www.netflix.com/"},
         {title:"Google Music",
-         link:"http://play.google.com/music/listen"}
+         link:"http://play.google.com/music/listen"},
+        {title:"Google Podcasts",
+         link:"https://play.google.com/music/listen?u=0#/podcasts"}
       ],
       "Work":[
         {title:"GitLab",
          link:"https://gitlab.com/dashboard/projects"},
-        {title:"GitHub",
-         link:"https://github.com"},
-        {title:"Todoist",
-         link:"https://en.todoist.com"},
-        {title:"Pomodoro",
-         link:"https://app.pomodoneapp.com/#/dashboard"},
-        {title:"Palleton",
-         link:"https://palleton.com"},
-        {title:"SkillShare",
-         link:"https://skillshare.com"}
+              {title:"GitHub",
+               link:"https://github.com"},
+         {title:"Todoist",
+          link:"https://en.todoist.com"},
+         {title:"Pomodoro",
+          link:"https://app.pomodoneapp.com/#/dashboard"},
+         {title:"Palleton",
+          link:"https://palleton.com"},
+         {title:"SkillShare",
+          link:"https://skillshare.com"}
       ],
       "SomethingAwful":[
         {title:"YOSPOS",
