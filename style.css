@@ -69,7 +69,7 @@ body {
   margin-left: 10px; }
 
 .weather {
-  background: rgba(229, 229, 229, 0.5);
+  background: rgba(229, 229, 229, 0.65);
   color: rgba(41, 53, 78, 0.9);
   padding: 10px; }
 
@@ -79,7 +79,7 @@ input {
   text-align: center;
   font-size: 44px;
   font-family: "Exo", sans-serif;
-  background-color: rgba(229, 229, 229, 0.5);
+  background-color: rgba(229, 229, 229, 0.65);
   color: rgba(41, 53, 78, 0.9);
   border: none; }
   input:focus {
@@ -102,7 +102,7 @@ ul {
     outline: none;
     transition: all 0.5s;
     color: rgba(41, 53, 78, 0.9);
-    background: rgba(229, 229, 229, 0.5); }
+    background: rgba(229, 229, 229, 0.65); }
   .menu ul {
     position: absolute;
     box-sizing: border-box;
@@ -122,14 +122,14 @@ ul {
         outline: 0;
         transition: all 0.5s;
         color: rgba(41, 53, 78, 0.9);
-        background: rgba(229, 229, 229, 0.5); }
+        background: rgba(229, 229, 229, 0.65); }
         .menu ul li > a:hover {
-          color: rgba(229, 229, 229, 0.5);
+          color: rgba(229, 229, 229, 0.65);
           background: rgba(41, 53, 78, 0.9); }
   .menu:hover > ul {
     max-height: 300px; }
   .menu:hover > a {
-    color: rgba(229, 229, 229, 0.5);
+    color: rgba(229, 229, 229, 0.65);
     background: rgba(41, 53, 78, 0.9); }
 
 /*# sourceMappingURL=style.css.map */
