@@ -102,9 +102,7 @@ var app = new Vue({
         {title:"Netflix",
          link:"http://www.netflix.com/"},
         {title:"Google Music",
-         link:"http://play.google.com/music/listen"},
-        {title:"Google Podcasts",
-         link:"https://play.google.com/music/listen?u=0#/podcasts"}
+         link:"http://play.google.com/music/listen"}
       ],
       "Work":[
         {title:"GitLab",
