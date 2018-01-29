@@ -115,8 +115,10 @@ var app = new Vue({
           link:"https://en.todoist.com"},
          {title:"Pomodoro",
           link:"https://app.pomodoneapp.com/#/dashboard"},
-         {title:"Palleton",
-          link:"https://palleton.com"},
+         {title:"Paletton",
+          link:"https://paletton.com"},
+         {title:"ColorCodes",
+          link:"http://htmlcolorcodes.com/color-picker/"},
          {title:"SkillShare",
           link:"https://skillshare.com"}
       ],
