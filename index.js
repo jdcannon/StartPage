@@ -116,7 +116,7 @@ var app = new Vue({
          {title:"Pomodoro",
           link:"https://app.pomodoneapp.com/#/dashboard"},
          {title:"Paletton",
-          link:"https://paletton.com"},
+          link:"http://paletton.com"},
          {title:"ColorCodes",
           link:"http://htmlcolorcodes.com/color-picker/"},
          {title:"SkillShare",
