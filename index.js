@@ -44,7 +44,7 @@ var app = new Vue({
       this.time = now.toLocaleTimeString('en-us', options).slice(0,-3);
     },
     getWeather: function(){
-      this.$http.get("http://api.openweathermap.org/data/2.5/weather?zip=35476,us&units=imperial&appid=7bc54dac6977ca3f07a995b649f12243").then(function(res){
+      this.$http.get("http://api.openweathermap.org/data/2.5/weather?zip=21703,us&units=imperial&appid=7bc54dac6977ca3f07a995b649f12243").then(function(res){
         this.temp = res.body.main.temp.toFixed(0) + " °F";
         this.weather = res.body.weather[0].description.replace(/\b\w/g, function(l){ return l.toUpperCase(); });
       }, function(res){
